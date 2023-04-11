@@ -1,0 +1,79 @@
+{%extends 'crypto.html'%}
+{%block pagecontent%}
+<meta http-equiv="refresh" content="5; ">
+<div style="overflow-x:auto;">
+    <table class="mytable">
+        <tr>
+            <th>Rank</th>
+            <th>Symbol</th>
+            <th>Name</th>
+            <th>supply</th>
+            <th>Market cap</th>
+            <th>Price($)</th>
+            <th>24hrs%</th>
+            <th>notification</th>
+            <th>info</th>
+            
+        </tr>
+        <tbody>
+        {%for x in dtx%}
+
+        
+        <tr>
+            {%for y,z in x.items%}
+
+            {% if y == 'rank' %}
+            
+            <td>{{z}}</td>
+            {%endif%}
+            
+            {% if y == 'name'%}
+            <td>{{z}}</td>
+            {%endif%}
+            
+            {% if y == 'symbol'%}
+            <td>{{z}}</td>
+            {%endif%}
+            
+            {% if y == 'supply'%}
+            <td>{{z |floatformat:"2"}}</td>
+            {%endif%}
+            
+            {% if y == 'marketCapUsd'%}
+            <td>{{z |floatformat:"2"}}</td>
+            {%endif%}
+
+            {% if y == 'priceUsd'%}
+            <td >${{ z |floatformat:"2"}}</td>
+            {%endif%}
+            
+            {% if y == 'explorer'%}
+            <td>
+                <div class="details">
+
+                <a href={{z}}>details</a>
+            </div>
+            </td>
+            {%endif%}            
+
+            {% if y == 'changePercent24Hr'%}
+            <td>{{z |floatformat:"2"}}%</td>
+            <td>
+                <a href="/userapp/usermail"><button class="fas fa-bell notify btn alert-dark" id="notify"></button></a>
+            </td>
+            {%endif%}
+            
+            
+            {%endfor%}
+        </tr>
+        {%endfor%}
+    </tbody>
+    </table>
+</div>
+
+<script>
+    
+</script>
+
+
+{%endblock pagecontent%}

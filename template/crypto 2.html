@@ -1,0 +1,116 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>crypto tracker</title>
+    <link rel="stylesheet" href="{% static 'font awesome/css/all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'my_css/crypto.css' %}">
+    
+</head>
+
+<body>
+
+            <nav class="navbar navbar-light my_bg">
+    <div class="row">
+        <div class="container-fluid ">
+                <a class="navbar-brand ml-3" href="#">
+                    <img src="{% static 'images/btc bg.jpg' %}" width="70" height="40" class="d-inline-block align-top" alt="">
+                    <b>Crypto Tracker</b>
+                </a>
+
+                <div class="btin"><button class="btn btn-info"> <i class="fas fa-search"></i></button>
+                    <input type="search" name="" id="" placeholder="search"></div>
+                <div>
+                    {%if user.is_authenticated%}
+                    <!-- <button class="btn btn-info">sign-in</button> -->
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop">
+                        log-out  </button>
+
+                        {%else%}
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false"
+                        tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-top">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="staticBackdropLabel">Sign-in</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <form action="" method="get">
+                                        <div class="form-group">
+                                            <label for="Fullname">Fullname</label>
+                                            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Fullname">
+                                          </div>
+                                          <div class="form-group">
+                                            <label for="Email">Email</label>
+                                            <input required type="email" class="form-control" id="formGroupExampleInput2" placeholder="Email address">
+                                          </div>
+                                          <div class="form-group">
+                                            <label for="password">Password</label>
+                                            <input type="password" class="form-control" id="formGroupExampleInput2" placeholder="password">
+                                            <small class="bg-white text-info">not less than 8 characters</small>
+                                          </div>
+                                          <div class="form-group">
+                                            <label for="price_update">will you like to get crypto price  update in your mail</label>
+                                            <!-- <input type="" class="form-control" id="formGroupExampleInput2" placeholder="password">
+                                            <small class="bg-white text-info">not less than 8 characters</small> -->
+                                            <select   class="form-control" id="formGroupExampleInput5" name="price_update" id="price_update">
+                                                <option id="update_opt" value=".."></option>
+                                                <option  id="update_opt1" value="YES">YES</option>
+                                                <option  id="update_opt2" value="NO">NO</option>
+                                            </select>
+                                          </div>
+                                          
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary update_btn">sign-in</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+                 
+                
+                {%endif%}
+                    <!-- modal end -->
+                </div>
+            </nav>
+        </div>
+    </div>
+    {%block pagecontent%}
+
+
+    {%endblock%}
+
+      <div class="container-fluid foot ">
+        <div class="row">
+            <div class="col text-center bg-dark">
+                <strong class="fas fa-envelope mr-4">crypto_Tracker@gmail.com</strong> 
+                <strong class="fas fa-phone">+2348183683118</strong>
+                <button class="togg btn btn-secondary">hide and show analog</button>
+                <h1 id="time"></h1>
+                <canvas class="mycanvas" id="canvas" width="150" height="150" > analog </canvas>
+        </div>
+          
+           
+        </div>
+        
+        </div>
+      <script src="{% static 'bootstrap/js/jquery-3.6.0.min.js' %}"></script>
+      <script src="{% static 'bootstrap/js/bootstrap.js' %}"></script>
+      <script src="{% static 'my_js/crypto.js' %}"></script>
+  
+</body>
+
+</html>

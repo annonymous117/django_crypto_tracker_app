@@ -1,0 +1,28 @@
+{%extends 'crypto.html'%}
+{%load static%}
+
+{{form.as_p}}
+{%block pagecontent%}
+
+{%for x in allusers %}
+<style>
+  .my_card{
+    background-color: #c0c4c7;
+    padding-left: 4rem;
+}
+</style>
+
+ 
+    <div class="card-body">
+      <h4 class="card-title">user feed back</h4>
+      <p class="card-title">names:{{x.names}}</p>
+      <p class="card-title">Email:{{x.email}}</p>
+      <p class="card-text">message:{{x.message}}</p>
+    </div>
+
+{%endfor%}
+  <!-- <b>user feeed back</b>
+  <p> -->
+    <!-- <p >{{x.names}} &nbsp; {{x.email}} {{x.message}}</p> -->
+   
+{%endblock%}

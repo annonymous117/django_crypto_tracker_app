@@ -1,0 +1,104 @@
+.full-bg {
+    background: url(../images/crypto\ bg-blk.jpg) no-repeat center;
+    min-height: 90vh;
+    background-size: cover;
+    animation: 6s infinite myanime;
+    color: white;
+    font-size: large;
+}
+
+
+
+.tab {
+  font-size: large;
+    color: white;
+}
+
+li {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    list-style-type: none;
+}
+
+.fab,
+.fas {
+    color: yellow;
+}
+.foot{ 
+ height: 200px; 
+ background: rgb(20, 20, 20);
+
+}
+.crypto {
+    text-shadow: black 6px 2px 5px;
+}
+
+.main_ul {
+    background: lightgrey;
+   list-style-type: none;
+    
+}
+
+.my_bg {
+
+    background-color: lightgray;
+    padding-bottom: 30px;
+}
+
+small {
+    background-color: grey;
+    color: white;
+    width: fit-content;
+    height: fit-content;
+    font-size: large;
+}
+.mycanvas{
+    margin-left: -270px; 
+    margin-top: -40px;
+    padding-bottom: 12px;
+}
+.btin {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+input {
+    background-color: transparent;
+    border-radius: 10px;
+    width: 200px;
+    height: 40px;
+}
+#time{
+    color: white;
+    border-left: thin 2px red;
+    margin-top: 34px;
+}
+/* canvas{
+   
+} */
+@keyframes myanime {
+    from {
+         background: url(../images/btc\ bg.jpg) no-repeat center; 
+        min-height: 90vh;
+        background-size: cover;
+        /* transition: 12s; */
+    }
+
+    to {
+         background: url(../images/crypto\ bg.jpg) no-repeat center; 
+
+        min-height: 90vh;
+        background-size: cover;
+        /* transition: 12s 2s ease;  */
+
+    }
+}
+
+ @media screen and (max-width:600px) {
+    .main_u{
+        max-width: 100%;
+    }
+    .hrs,.day{
+        column-count: 2;
+    }
+} 

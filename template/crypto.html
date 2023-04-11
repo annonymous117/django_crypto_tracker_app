@@ -1,0 +1,78 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible"  content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>crypto tracker</title>
+    <link rel="stylesheet" href="{% static 'font awesome/css/all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'my_css/crypto.css' %}">
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.css' %}">
+    <link rel="shortcut icon" href="{% static 'images/btc bg.jpg' %}" type="image/x-icon">
+</head>
+
+<body>
+    <div class="row">
+        <div class="container-fluid ">
+
+            <nav class="navbar navbar-dark bg-dark">
+                <a class="navbar-brand ml-3" href="#">
+                    <img src="{% static 'images/btc bg.jpg' %}" width="70" height="40" class="d-inline-block align-top" alt="">
+                    <b>Crypto Tracker</b>
+                </a>
+
+                <div class="btin"><button class="btn btn-info"> <i class="fas fa-search"></i></button>
+                    <input type="search" name="" id="srch" placeholder="search">
+                    <button type="button" class="btn cbtn btn-outline-info modebtn"><i id="icon" class="fas fa-moon moon"> </i></button>
+
+                </div>
+               
+
+            </nav>
+        </div>
+    </div>
+    
+    {%block pagecontent%}
+    <div style="overflow-x:auto;">
+    
+    <table class="mytable">
+        
+        <tr>
+            <th>Currency</th>
+            <th>price($)</th>
+            <th>volume</th>
+            <th>24hrs%</th>
+            <th>7d%</th>
+            <th>notification</th>
+        </tr>
+        <tr>
+            <td>BTC</td>
+            <td>20202</td>
+            <td>12478643437</td>
+            <td>80%</td>
+            <td>17%</td>
+        </tr>
+    </table>
+    </div>
+    {%endblock pagecontent%}
+    <div class="container-fluid  ">
+        <div class="row">
+
+            <div class="col foot text-center bg-dark">
+                <strong>Email:<i class="envl fas fa-envelope"></i> crypto_Tracker@gmail.com</strong> 
+                <strong >phone:<i class="fas fa-phone phn"></i> +2348183684118</strong> <br>
+               <small><i class="fas fa-copyright"></i> youngest developer</small>
+        </div>          
+    </div>
+   
+        
+        </div>
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+        <script src="{% static 'bootstrap/js/jquery-3.6.0.min.js' %}"></script>
+        <script src="{% static 'bootstrap/js/bootstrap.js' %}"></script>
+        <script src="{% static 'my_js/crypto.js' %}"></script>
+        </body>
+  </html>

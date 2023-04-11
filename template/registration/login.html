@@ -1,0 +1,44 @@
+{%extends "crypto.html"%}
+{%block pagecontent%}
+<form method="POST">
+    {% csrf_token %}
+    {{form.as_p}}
+               
+    <input type="submit" value="login">
+    </form>
+   
+{%endblock%}
+<!-- <style>
+   body{
+       background: mintcream;
+       text-align: center;
+   }
+   div{
+       display: flex;
+       justify-content: center;
+       margin-top: 60px;
+   }
+    form{
+        width: 670px; border: solid 1px rgb(141, 141, 173);
+        border-radius: 20px; padding: 5px;
+        background-color: transparent;
+    }
+    input{
+        border: solid lightgrey 1px;
+        border-radius: 20px; padding: 5px;
+        width: 80%;
+    }
+    h1{
+        font-family: cursive;
+        color: rgb(218, 26, 26);
+    }
+    .link{
+        display: flex;
+       justify-content: center;  
+       
+    }
+    a{
+        margin: 12px;
+    } -->
+</style>
+

@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<body>
+        
+
+ <style>
+   
+   body{
+    background: url(../static/images/w3images/architect.jpg) center no-repeat;
+    min-height: 100vh; min-width: 100vw;
+   }
+    .userform{
+        padding: 15px; border: double 2px rgb(255, 248, 248);
+        margin: 12px;
+        width: 600px;
+        display: block;
+        border-radius: 15px;
+
+    }
+    .userform input{
+        width: 500px;
+        height: 20px;
+        text-align: center;
+    }
+    label{
+        font-size: 20px;
+        font-family: cursive;
+        color: #05577f;
+        display: inline-block;
+        width: 90%;
+        text-align: center;
+
+
+    }
+    .userinput{
+        background-color: #065880;
+        text-align: center;
+        border: white 1px double;
+        padding: 20px;
+        margin: 25px;
+        font-size: 15px;
+        width: 50%;
+        border: 1px solid #f4f4f4;
+        border-radius: 20px;
+        color: #f4f4f4;
+    }
+    .cont{
+    background: white;
+    height: 295px; width: 300px;
+    color: blueviolet;
+    text-align: center;
+    width: fit-content;
+    margin: auto;
+    }
+    .head{
+        font-size: 20px;  color: white; text-align: center;
+        font-family: 'Times New Roman', Times, serif;
+        background-color: #065880;
+        padding: 10px;
+    }
+
+   
+</style>
+
+<div class="cont">
+    <h2 class="head">Get 24hrs notification</h2>
+    <form action="" method="POST" class="userform">
+
+        {% csrf_token %} 
+        
+        {{form.as_table}}
+        <input class="userinput" type="submit" value="submit form">
+    </form>
+</div>
+</body>
+</html>
